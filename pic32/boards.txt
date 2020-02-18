@@ -1243,3 +1243,29 @@ chipkit_DP32.menu.USB.b_cdcacm_km.build.extra_flags=-D__USB_ENABLED__ -D__USB_CD
 chipkit_DP32.menu.USB.z_custom=Custom / Disabled
 chipkit_DP32.menu.USB.z_custom.build.extra_flags=
 
+# Cresson MD920
+
+CressonMD920.name=Cresson MD920
+CressonMD920.group=chipKIT
+
+# new items
+CressonMD920.platform=pic32
+CressonMD920.build.board=_BOARD_CRESSON_MD920_
+CressonMD920.ldscript=chipKIT-application-32MX150F128.ld
+CressonMD920.build.ldscript.path={build.variant.path}
+# Use this -G1024 option ONLY for boards with 64K RAM or less
+CressonMD920.compiler.c.extra_flags=-G1024
+CressonMD920.compiler.cpp.extra_flags=-G1024
+# end of new items
+
+CressonMD920.upload.protocol=stk500v2
+# 128KB - 4K for EEPROM - 4K for bootloader
+CressonMD920.upload.maximum_size=122880
+CressonMD920.upload.maximum_data_size=32768
+CressonMD920.upload.speed=115200
+CressonMD920.upload.tool=pic32prog
+
+CressonMD920.build.mcu=32MX150F128B
+CressonMD920.build.f_cpu=40000000L
+CressonMD920.build.core=pic32
+CressonMD920.build.variant=CressonMD920
